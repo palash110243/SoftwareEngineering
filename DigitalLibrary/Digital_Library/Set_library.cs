@@ -60,9 +60,14 @@ namespace Digital_Library
         {
             SqlConnection con = Databaseconnection.Get_con();
             SqlCommand cmd = new SqlCommand();
+            String book_name=book_textBox.Text;
+            String author_name=author_textBox.Text;
+            String select_term=term_comboBox.Text;
+            String select_year = Year_comboBox.Text;
+            String path=path_textBox.Text;
             try
             {
-                if (book_textBox.Text != "" && author_textBox.Text != "" && term_comboBox.Text != "" && Year_comboBox.Text != "" && path_textBox.Text != "")
+                if (book_name != "" && author_name != "" && select_term != "" && select_year != "" && path != "")
                 {
 
                     cmd.CommandText = "insert into EntryList (Book_Name,Author_Name,Term,Year,Path) values ('" + book_textBox.Text + "','" + author_textBox.Text + "','" + term_comboBox.Text + "','" + Year_comboBox.Text + "','" + path_textBox.Text + "')";
