@@ -72,11 +72,7 @@ namespace Digital_Library
                     MessageBox.Show("Entry saved Successfully");
                     select_table();
                     con.Close();
-                    book_textBox.Text = "";
-                    author_textBox.Text = "";
-                    term_comboBox.Text = "";
-                    Year_comboBox.Text = "";
-                    path_textBox.Text = "";
+                    
                 }
                 else
                 {
@@ -153,11 +149,12 @@ namespace Digital_Library
 
             }
         }
+
+
         string tempvalue;
         private void delete(object sender, EventArgs e)
         {
             SqlConnection con = Databaseconnection.Get_con();
-            //SqlCommand cmd = new SqlCommand();
             string query = "SELECT Book_Name FROM EntryList ";
 
             SqlCommand cmd = new SqlCommand(query, con);
