@@ -57,3 +57,6 @@ C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Librar
 C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.Digital_library.resources
 C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.Properties.Resources.resources
 C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.csproj.GenerateResource.Cache
+C:\Users\Aly_Armann\Documents\GitHub\New folder\SoftwareEngineering\DigitalLibrary\Digital_Library\bin\Debug\Digital_Library.exe.config
+C:\Users\Aly_Armann\Documents\GitHub\New folder\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.exe
+C:\Users\Aly_Armann\Documents\GitHub\New folder\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.pdb
