@@ -123,14 +123,6 @@ namespace Digital_Library
                 }
             }
 
-
-
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                string filepath = openFileDialog1.FileName;
-                path = filepath;
-            }
         }
 
         private void search(object sender, EventArgs e)
