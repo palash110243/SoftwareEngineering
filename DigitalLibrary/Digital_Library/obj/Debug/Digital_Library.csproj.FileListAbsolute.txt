@@ -50,3 +50,10 @@ C:\Users\palash\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Libr
 C:\Users\palash\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.Digital_library.resources
 C:\Users\palash\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.Properties.Resources.resources
 C:\Users\palash\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.csproj.GenerateResource.Cache
+C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\bin\Debug\Digital_Library.exe.config
+C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.exe
+C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.pdb
+C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.csprojResolveAssemblyReference.cache
+C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.Digital_library.resources
+C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.Properties.Resources.resources
+C:\Users\REAZ\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\obj\Debug\Digital_Library.csproj.GenerateResource.Cache
