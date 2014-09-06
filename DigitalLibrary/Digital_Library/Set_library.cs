@@ -70,7 +70,7 @@ namespace Digital_Library
                 if (book_name != "" && author_name != "" && select_term != "" && select_year != "" && path != "")
                 {
 
-                    cmd.CommandText = "insert into EntryList (Book_Name,Author_Name,Term,Year,Path) values ('" + book_textBox.Text + "','" + author_textBox.Text + "','" + term_comboBox.Text + "','" + Year_comboBox.Text + "','" + path_textBox.Text + "')";
+                    cmd.CommandText = "insert into EntryList (Book_Name,Author_Name,Term,Year,Path) values ('" + book_name + "','" + author_name + "','" + select_term + "','" + select_year + "','" + path + "')";
                     cmd.Connection = con;
                     cmd.ExecuteNonQuery();
 
@@ -97,7 +97,9 @@ namespace Digital_Library
 
         private void browse_button_Click(object sender, EventArgs e)
         {
-            if (type_comboBox.Text.ToString().CompareTo("PDF Files") == 0)
+            String path=path_textBox.Text;
+            String com=type_comboBox.Text;
+            if (com.ToString().CompareTo("PDF Files") == 0)
             {
                 var dlg = new OpenFileDialog();
                 dlg.Filter = "PDF Files|*.pdf";
@@ -105,7 +107,7 @@ namespace Digital_Library
                 var res = dlg.ShowDialog();
                 if (res == DialogResult.OK)
                 {
-                    path_textBox.Text = dlg.FileName;
+                     path= dlg.FileName;
                 }
             }
 
@@ -117,7 +119,7 @@ namespace Digital_Library
                 var res = dlg.ShowDialog();
                 if (res == DialogResult.OK)
                 {
-                    path_textBox.Text = dlg.FileName;
+                    path = dlg.FileName;
                 }
             }
 
@@ -127,15 +129,15 @@ namespace Digital_Library
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string filepath = openFileDialog1.FileName;
-                //path_textBox5.Text = filepath;
+                path = filepath;
             }
         }
 
         private void search(object sender, EventArgs e)
         {
-
+            String search = search_textBox1.Text;
             DataView DV = new DataView(table);
-            DV.RowFilter = string.Format("Book_Name LIKE '%{0}%'", search_textBox1.Text);
+            DV.RowFilter = string.Format("Book_Name LIKE '%{0}%'", search);
             dataGridView2.DataSource = DV;
 
         }
@@ -147,10 +149,11 @@ namespace Digital_Library
 
         private void showbook(object sender, DataGridViewCellEventArgs e)
         {
+            String delete= delete_textBox2.Text;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
-                delete_textBox2.Text = row.Cells["Book_Name"].Value.ToString();
+               delete = row.Cells["Book_Name"].Value.ToString();
 
             }
         }
@@ -161,7 +164,7 @@ namespace Digital_Library
         {
             SqlConnection con = Databaseconnection.Get_con();
             string query = "SELECT Book_Name FROM EntryList ";
-
+            String delete=delete_textBox2.Text;
             SqlCommand cmd = new SqlCommand(query, con);
 
             SqlDataReader rdr;
@@ -172,7 +175,7 @@ namespace Digital_Library
             {
                 tempvalue = rdr["Book_Name"].ToString();
 
-                if (delete_textBox2.Text.ToString().CompareTo(tempvalue) == 0)
+                if (delete.ToString().CompareTo(tempvalue) == 0)
                 {
 
                     break;
@@ -181,20 +184,20 @@ namespace Digital_Library
 
             }
             con.Close();
-            if (delete_textBox2.Text.ToString().CompareTo(tempvalue) == 0)
+            if (delete.ToString().CompareTo(tempvalue) == 0)
             {
                 con.Open();
 
                 try
                 {
-                    cmd.CommandText = "delete from EntryList where Book_Name='" + delete_textBox2.Text + "'";
+                    cmd.CommandText = "delete from EntryList where Book_Name='" + delete + "'";
                     cmd.Connection = con;
                     cmd.ExecuteNonQuery();
 
 
                     MessageBox.Show("Book Deleted successfilly");
                     con.Close();
-                    delete_textBox2.Text = "";
+                    delete = "";
 
                     select_table();
                 }
