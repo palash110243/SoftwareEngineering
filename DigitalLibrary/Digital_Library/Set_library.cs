@@ -17,22 +17,15 @@ namespace Digital_Library
     {
 
 
-
+        DataTable table;
         public Digital_library()
         {
             InitializeComponent();
-            LoadList();
+            select_table();
         }
 
 
-
-
-
-
-
-
-        DataTable table;
-        public void LoadList()
+        public void select_table()
         {
 
             SqlConnection con = Databaseconnection.Get_con();
@@ -77,7 +70,7 @@ namespace Digital_Library
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Entry saved Successfully");
-                    LoadList();
+                    select_table();
                     con.Close();
                     book_textBox.Text = "";
                     author_textBox.Text = "";
@@ -201,7 +194,7 @@ namespace Digital_Library
                     con.Close();
                     delete_textBox2.Text = "";
 
-                    LoadList();
+                    select_table();
                 }
 
                 catch (Exception Ex)

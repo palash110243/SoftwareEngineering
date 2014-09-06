@@ -11,7 +11,7 @@ namespace Digital_Library
     {
         public static SqlConnection Get_con()
         {
-            string con = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Term 3-2\project\Digital_Library\Book_List.mdf;Integrated Security=True";
+            string con = @" Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\palash\Documents\GitHub\SoftwareEngineering\DigitalLibrary\Digital_Library\Book_List.mdf;Integrated Security=True";
             SqlConnection Conn = new SqlConnection(con);
             Conn.Open();
             return Conn;
