@@ -25,11 +25,6 @@ namespace Digital_Library
         }
 
 
-        //hofhoids hiiowehfilhhopn 
-        //jhoiweurfhfli[edfi;jv  nsdhofhoihdif
-
-       // hwehoihyrfhjejhlk/
-
         public void select_table()
         {
 
@@ -93,7 +88,7 @@ namespace Digital_Library
             }
             catch (Exception)
             {
-                MessageBox.Show("Exception occurte please handel it");
+                MessageBox.Show("Exception occure please handel it");
 
                 con.Close();
             }
@@ -128,12 +123,12 @@ namespace Digital_Library
 
 
 
-            /*OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string filepath = openFileDialog1.FileName;
-                path_textBox5.Text = filepath;
-            }*/
+                //path_textBox5.Text = filepath;
+            }
         }
 
         private void search(object sender, EventArgs e)
